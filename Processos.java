@@ -3,13 +3,13 @@ import java.util.*;
 public class Processos {
 
     private ArrayList<BCP> bloqueados = new ArrayList<>();
-    private ArrayList<BCP> prontos = new ArrayList<>();
+    private LinkedList<BCP> prontos = new LinkedList<>();
 
     public ArrayList<BCP> getBloqueados() {
         return this.bloqueados;
     }
 
-    public ArrayList<BCP> getProntos() {
+    public LinkedList<BCP> getProntos() {
         return this.prontos;
     }
 
