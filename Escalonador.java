@@ -94,10 +94,10 @@ public class Escalonador {
     }
 
     private void executarProcesso(BCP processoBCP, int comExecutadas) throws IOException {
+        processoBCP.incrementaContadorDePrograma();
         String com = processoBCP.getComando();
         executarInstrucao(processoBCP, com);
         executados++;
-        processoBCP.incrementaContadorDePrograma();
 
         if (com.contains("E/S") || com.contains("SAIDA")) {
             interromperProcesso(processoBCP, com, comExecutadas);
